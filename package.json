@@ -1,7 +1,8 @@
 {
-  "name": "testpackage",
-  "homepage": "/jannel/_ClientSpecific/41543/react",
-  "version": "0.1.0",
+  "name": "form-to-pdf",
+  "version": "1.0.0",
+  "description": "form to pdf",
+  "main": "index.js",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
@@ -21,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "set BUILD_PATH=react&& react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
