@@ -1,18 +1,18 @@
+name: React app deployment
+
 on:
   push:
-    branches:
-      - "deploy" # change to the branch you wish to deploy from
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    branches: [ deploy ]
+  pull_request:
+    branches: [ deploy ]
 
 jobs:
-  deploy:
+  build:
+
     runs-on: ubuntu-latest
+    
     steps:
-    - id: build-publish
-      uses: bitovi/github-actions-react-to-github-pages@v1.2.2
-      with:
-        path: build # change to your build folder
+    - uses: actions/checkout@v2
+
+    - name: Deploy react app to github pages
+      uses: tanwanimohit/deploy-react-to-ghpages@v1.0.2
